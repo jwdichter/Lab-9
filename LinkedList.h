@@ -67,6 +67,16 @@ T LinkedList<T>::get(int index) const {
 
 template <class T>
 T LinkedList<T>::remove(int index) {
+   if (index >= this->size() || index < 0) {
+      string msg = "Invalid index: [" + to_string(index) + "]. " + 
+         "List Size: [" + to_string(this->size()) + "]. ";
+      throw invalid_argument(msg.c_str())
+      }
+      list<T>::iterator it = theList.begin();
+      advance (it, index);
+      theList.erase(it);
+      return *it; 
+   
 
 }
 
