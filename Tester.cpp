@@ -25,6 +25,8 @@ int main() {
   cout << "intList.get(1): " << intList.get(1) << " [10]" << endl;
   cout << "intList.add(15)" << endl;
   cout << "intList.get(2): " << intList.get(2) << " [15]" << endl;
+  cout << "intList.remove(1): " << intList.remove(1) << " [10]" << endl;
+  cout << "intList.get(1): " << intList.get(1) << " [15]" << endl;
   
   cout << "String:" << endl;
   stringList.add("A");
@@ -37,6 +39,8 @@ int main() {
   cout << "stringList.get(1): " << stringList.get(1) << " [B]" << endl;
   cout << "stringList.add(\"C\")" << endl;
   cout << "stringList.get(2): " << stringList.get(2) << " [C]" << endl;
+  cout << "stringList.remove(1): " << stringList.remove(1) << " [B]" << endl;
+  cout << "stringList.get(1): " << stringList.get(1) << " [C]" << endl;
 	
   
   
