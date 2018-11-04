@@ -25,8 +25,11 @@ int main() {
   cout << "intList.get(1): " << intList.get(1) << " [10]" << endl;
   cout << "intList.add(15)" << endl;
   cout << "intList.get(2): " << intList.get(2) << " [15]" << endl;
+	
+  cout << "intList.size(): " << intList.size() << " [3]" << endl;
   cout << "intList.remove(1): " << intList.remove(1) << " [10]" << endl;
   cout << "intList.get(1): " << intList.get(1) << " [15]" << endl;
+  cout << "intList.size(): " << intList.size() << " [2]" << endl;
   
   cout << "String:" << endl;
   stringList.add("A");
@@ -39,8 +42,11 @@ int main() {
   cout << "stringList.get(1): " << stringList.get(1) << " [B]" << endl;
   cout << "stringList.add(\"C\")" << endl;
   cout << "stringList.get(2): " << stringList.get(2) << " [C]" << endl;
+	
+  cout << "stringList.size(): " << stringList.size() << " [3]" << endl;
   cout << "stringList.remove(1): " << stringList.remove(1) << " [B]" << endl;
   cout << "stringList.get(1): " << stringList.get(1) << " [C]" << endl;
+  cout << "stringList.size(): " << stringList.size() << " [2]" << endl;
 	
   
   
@@ -56,15 +62,6 @@ int main() {
      cerr << "\tInvalid Argument error: " << ie.what() << endl;
   }
 	
-  cout << "intList.remove(10): "; 
-  try {
-     intList.remove(10);
-   }
-  catch (const std::invalid_argument& ie) {
-     cerr << "\tInvalid Argument error: " << ie.what() << endl;
-  }
-
-	
   cout << "String:" << endl;
   cout << "stringList.get(10): ";
   try {
@@ -72,16 +69,7 @@ int main() {
    }
   catch (const std::invalid_argument& ie) {
      cerr << "\tInvalid Argument error: " << ie.what() << endl;
-  }
-	
-  cout << "stringList.remove(10): "; 
-  try {
-     stringList.remove(10);
-   }
-  catch (const std::invalid_argument& ie) {
-     cerr << "\tInvalid Argument error: " << ie.what() << endl;
-  }
-
+  }   
 	
   cout << "------Index < 0-------" << endl;
   cout << "Int:" << endl;
@@ -93,15 +81,6 @@ int main() {
      cerr << "\tInvalid Argument error: " << ie.what() << endl;
   }
 	
-  cout << "intList.remove(-2): "; 
-  try {
-     intList.remove(-2);
-   }
-  catch (const std::invalid_argument& ie) {
-     cerr << "\tInvalid Argument error: " << ie.what() << endl;
-  }
-
-	
   cout << "String:" << endl;
   cout << "stringList.get(-1): ";
   try {
@@ -110,13 +89,4 @@ int main() {
   catch (const std::invalid_argument& ie) {
      cerr << "\tInvalid Argument error: " << ie.what() << endl;
   }  
-	
-  cout << "stringList.remove(-2): "; 
-  try {
-     stringList.remove(-2);
-   }
-  catch (const std::invalid_argument& ie) {
-     cerr << "\tInvalid Argument error: " << ie.what() << endl;
-  }
-
 }
