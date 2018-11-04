@@ -62,7 +62,7 @@ T LinkedList<T>::get(int index) const {
     }
     list<T>::iterator it = theList.begin();
     advance(it, index);
-    return *it
+    return *it;
 }
 
 template <class T>
