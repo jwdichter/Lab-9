@@ -28,7 +28,10 @@ class LinkedList
 };
 
 template <class T>
-LinkedList<T>::LinkedList() {}
+LinkedList<T>::LinkedList() {
+   list<T> emptyList;
+   theList = emptyList;
+}
 
 template <class T>
 LinkedList<T>::LinkedList(const LinkedList<T>& other) {
