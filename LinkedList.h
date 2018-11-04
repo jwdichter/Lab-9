@@ -35,7 +35,7 @@ LinkedList<T>::LinkedList() {
 
 template <class T>
 LinkedList<T>::LinkedList(const LinkedList<T>& other) {
-   
+   theList = other.theList;
 }
 
 template <class T>
