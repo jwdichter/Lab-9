@@ -55,8 +55,12 @@ void LinkedList<T>::add(T element) {
 
 template <class T>
 T LinkedList<T>::get(int index) const {
+    if (this->size() = 0) {
+    string msg1 = "Invalid attempt to get from empty list.";
+    throw invalid_argument(msg1.c_str());
+    }
     if (index >= this->size() || index < 0) {
-    string msg = "Invalid index: [" + to_string(index) + "]. " +
+    string msg2 = "Invalid index: [" + to_string(index) + "]. " +
       "List Size: [" + to_string(this->size()) + "]. ";
     throw invalid_argument(msg.c_str());
     }
@@ -67,8 +71,12 @@ T LinkedList<T>::get(int index) const {
 
 template <class T>
 T LinkedList<T>::remove(int index) {
+   if (this->size() = 0) {
+    string msg1 = "Invalid attempt to remove from empty list.";
+    throw invalid_argument(msg1.c_str());
+    }   
    if (index >= this->size() || index < 0) {
-      string msg = "Invalid index: [" + to_string(index) + "]. " + 
+      string msg2 = "Invalid index: [" + to_string(index) + "]. " + 
          "List Size: [" + to_string(this->size()) + "]. ";
       throw invalid_argument(msg.c_str());
       }
