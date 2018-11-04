@@ -89,7 +89,7 @@ LinkedList<T>& LinkedList<T>::operator+=( const T& item ); {
    
    if (this != &item) {
       
-      for (ConstIterator i = item.Begin(); i != item.End(); ++i) {
+      for (list<T>::iterator i = item.Begin(); i != item.End(); ++i) {
          this.push_back(i)
       }
       
