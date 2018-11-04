@@ -49,12 +49,18 @@ void LinkedList<T>::add(T element) {
 }
 
 template <class T>
-T LinkedList<T>::get(int index) const {}
+T LinkedList<T>::get(int index) const {
+
+}
 
 template <class T>
-T LinkedList<T>::remove(int index) {}
+T LinkedList<T>::remove(int index) {
+
+}
 
 template <class T>
-
+vector<T> LinkedList<T>::toArray() const {
+   
+}
 
 #endif
