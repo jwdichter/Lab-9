@@ -82,7 +82,8 @@ T LinkedList<T>::remove(int index) {
 
 template <class T>
 vector<T> LinkedList<T>::toArray() const {
-   
+   vector<T> v(begin(theList), end(theList));
+   return v;
 }
 
 #endif
