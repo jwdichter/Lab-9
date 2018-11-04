@@ -74,8 +74,9 @@ T LinkedList<T>::remove(int index) {
       }
       list<T>::iterator it = theList.begin();
       advance (it, index);
+      T temp = *it;
       theList.erase(it);
-      return *it; 
+      return temp;
 }
 
 template <class T>
