@@ -3,6 +3,7 @@
 
 #include <list>
 #include <vector>
+using namespace std;
 
 template <class T>
 class LinkedList
@@ -25,5 +26,30 @@ class LinkedList
 
      LinkedList<T>& operator+=( const T& item );
 };
+
+template <class T>
+LinkedList<T>::LinkedList() {}
+
+template <class T>
+LinkedList<T>::~LinkedList() {}
+
+template <class T>
+int LinkedList<T>::size() const {
+   return theList.size();
+}
+
+template <class T>
+void LinkedList<T>::add(T element) {
+   theList.push_back(element);
+}
+
+template <class T>
+T LinkedList<T>::get(int index) const {}
+
+template <class T>
+T LinkedList<T>::remove(int index) {}
+
+template <class T>
+
 
 #endif
