@@ -3,6 +3,8 @@
 
 #include <list>
 #include <vector>
+#include <iterator>
+#include <stdexcept>
 using namespace std;
 
 template <class T>
@@ -53,7 +55,14 @@ void LinkedList<T>::add(T element) {
 
 template <class T>
 T LinkedList<T>::get(int index) const {
-
+    if (index >= this->size() || index < 0) {
+    string msg = "Invalid index: [" + to_string(index) + "]. " +
+      "List Size: [" + to_string(this->size()) + "]. ";
+    throw invalid_argument(msg.c_str())
+    }
+    list<T>::iterator it = theList.begin();
+    advance(it, index);
+    return *it
 }
 
 template <class T>
