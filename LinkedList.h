@@ -84,4 +84,11 @@ vector<T> LinkedList<T>::toArray() const {
    return v;
 }
 
+template <class T>
+LinkedList<T>& LinkedList<T>::operator+=( const T& item ); {
+   
+      
+
+}
+
 #endif
