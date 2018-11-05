@@ -6,9 +6,6 @@ using namespace std;
 int main() {
   cout << "----------LINKED LIST TESTER----------" << endl;
 	
-  cout << "Testing constructors put/getters: " << endl;
-  cout << "-------------------------" << endl;
-
   cout << "Linked List intList, Linked List stringList" << endl;
   LinkedList intList;
   LinkedList stringList;
@@ -48,6 +45,9 @@ int main() {
   cout << "stringList.get(1): " << stringList.get(1) << " [C]" << endl;
   cout << "stringList.size(): " << stringList.size() << " [2]" << endl;
 	
+  cout << "------------Testing toArray-------------"  << endl;
+  cout << "intList.toArray(): " << intList.toArray() << endl;
+  cout << "stringList.toArray(): " << stringList.toArray() << endl;
   
   
   cout << "------------Testing Illegal Indices-------------"  << endl;
@@ -121,7 +121,17 @@ int main() {
   catch (const std::invalid_argument& ie) {
      cerr << "\tInvalid Argument error: " << ie.what() << endl;
   }
-	
+  
+  cout << "-------------Testing Copy Constructor------------" << endl;
+  cout << "LinkedList<T> intList2(intList)" << endl;
+  cout << "LinkedList<T> stringList2(stringList)" << endl;
+  LinkedList<T> intlist2(intList);
+  LinkedList<T> stringList2(stringList);
+  
+  cout << "Testing get method on copied list" << endl;
+  cout << "intList2.get(0): " << intList2.get(0) << " [5]" << endl;
+  cout << "stringList2.get(0): " << stringList2.get(2) << " [A]" << endl;	
+
   cout << "-------------Testing Operator------------" << endl; 
   intList += stringList;
 	
