@@ -122,5 +122,13 @@ int main() {
      cerr << "\tInvalid Argument error: " << ie.what() << endl;
   }
 	
+  cout << "Testing Operator: " << endl; 
+  intList += stringList;
+	
+  cout << "intList += stringList: "; 
+  cout << "intList.get(0): " << intList.get(0) << " [5]" << endl;
+  cout << "intList.get(1): " << intList.get(1) << " [15]" << endl;
+  cout << "intList.get(2): " << intList.get(2) << " [A]" << endl;
+  cout << "intList.get(3): " << intList.get(3) << " [C]" << endl;  
 	
 }
